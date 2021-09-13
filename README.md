@@ -43,7 +43,7 @@
 
 
 ## About
-go-log is a simplified application logger released as Go package. Using Zero Allocation JSON Logger under the hood, it simplifies logging of application-wide messages. It supports three logging modes, being Default, Pretty, and JSON. Logs are directed to the console by default, but can be buffered or redirected to a log file instead.
+go-log is a simplified logger package for Go applications. Using the Zero Allocation JSON Logger (zerolog) under the hood, it simplifies the logging of application-wide messages. It supports three logging modes: Default, Pretty, and JSON. Logs are directed to the console by default, but can be buffered or redirected to a log file instead.
 
 ## Built With
 The project uses the following core software components:
@@ -65,7 +65,7 @@ Import go-log into your application to start using the logger. By default, go-lo
 package main
 
 import (
-    log "go.markdumay.org/log"
+    "go.markdumay.org/log"
 )
 
 func main() {

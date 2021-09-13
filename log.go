@@ -44,22 +44,22 @@ const (
 
 // Defines a pseudo enumeration of possible logging levels, copied from zerolog to hide implementation details.
 const (
-	// DebugLevel defines debug log level.
+	// DebugLevel defines the debugging log level.
 	DebugLevel Level = iota
 
-	// InfoLevel defines info log level.
+	// InfoLevel defines the info log level.
 	InfoLevel
 
-	// WarnLevel defines warn log level.
+	// WarnLevel defines the warning log level.
 	WarnLevel
 
-	// ErrorLevel defines error log level.
+	// ErrorLevel defines the error log level.
 	ErrorLevel
 
-	// FatalLevel defines fatal log level.
+	// FatalLevel defines the fatal log level.
 	FatalLevel
 
-	// PanicLevel defines panic log level.
+	// PanicLevel defines the panic log level.
 	PanicLevel
 
 	// NoLevel defines an absent log level.
@@ -68,7 +68,7 @@ const (
 	// Disabled disables the logger.
 	Disabled
 
-	// TraceLevel defines trace log level.
+	// TraceLevel defines the trace log level.
 	TraceLevel Level = -1
 )
 
@@ -111,7 +111,7 @@ type Writer interface {
 // 		package main
 //
 // 		import (
-// 			log "go.markdumay.org/log"
+// 			"go.markdumay.org/log"
 // 		)
 //
 // 		func main() {
