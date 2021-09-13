@@ -1,4 +1,4 @@
-# go-log (work in progress)
+# go-log
 
 <!-- Tagline -->
 <p align="center">
