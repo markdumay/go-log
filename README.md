@@ -12,6 +12,9 @@
     <a href="https://pkg.go.dev/go.markdumay.org/log" alt="Go Package">
         <img src="https://pkg.go.dev/badge/go.markdumay.org/log.svg" alt="Go Reference" />
     </a>
+    <a href="https://github.com/markdumay/go-log/releases/latest" alt="Go Module">
+        <img src="https://img.shields.io/github/v/tag/markdumay/go-log?label=module" alt="Go Module" />
+    </a>
     <a href="https://www.codefactor.io/repository/github/markdumay/go-log" alt="CodeFactor">
         <img src="https://img.shields.io/codefactor/grade/github/markdumay/go-log" />
     </a>
