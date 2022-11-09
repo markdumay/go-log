@@ -102,7 +102,7 @@ func main() {
 ## Contributing
 go-log welcomes contributions of any kind. It is recommended to create an issue to discuss your intended contribution before submitting a larger pull request though. Please consider the following guidelines when contributing:
 - Address all linting recommendations from `golangci-lint run` (using `.golangci.yml` from the repository).
-- Ensure the code is covered by one or more unit tests (using Testify when applicable).
+- Ensure the code is covered by one or more unit tests (using [Testify][testify_url] when applicable).
 - Follow the recommendations from [Effective Go][effective_go] and the [Uber Go Style Guide][uber_go_guide].
 
 The following steps decribe how to submit a Pull Request:

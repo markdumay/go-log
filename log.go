@@ -1,6 +1,10 @@
 // Copyright © 2021 Mark Dumay. All rights reserved.
 // Use of this source code is governed by The MIT License (MIT) that can be found in the LICENSE file.
 
+// Package log is a simplified logger package for Go applications. Using the Zero Allocation JSON Logger
+// (zerolog) under the hood, it simplifies the logging of application-wide messages. It supports three logging modes:
+// Default, Pretty, and JSON. Logs are directed to the console by default, but can be buffered or redirected to a log
+// file instead.
 package log
 
 //======================================================================================================================
@@ -108,38 +112,39 @@ type Writer interface {
 // formats the log as a JSON message, consisting of the attributes timestamp (RFC 3339), level, and message.
 //
 // A default logger is instantiated by default. The following examples illustrate how to use the package.
-// 		package main
 //
-// 		import (
-// 			"go.markdumay.org/log"
-// 		)
+//	package main
 //
-// 		func main() {
-// 			// show an info message using default formatting, expected output:
-// 			// This is an info log
-// 			log.Info("This is an info log")
+//	import (
+//		"go.markdumay.org/log"
+//	)
 //
-// 			// show an error message using default formatting, expected output:
-// 			// ERROR  Error message
-// 			log.Info("Error message")
+//	func main() {
+//		// show an info message using default formatting, expected output:
+//		// This is an info log
+//		log.Info("This is an info log")
 //
-// 			// switch to pretty formatting
-// 			log.InitLogger(log.Pretty)
+//		// show an error message using default formatting, expected output:
+//		// ERROR  Error message
+//		log.Info("Error message")
 //
-// 			// show a warning using pretty formatting, expected output:
-// 			// 2006-01-02T15:04:05Z07:00 | WARN   | Warning
-// 			log.Warn("Warning")
+//		// switch to pretty formatting
+//		log.InitLogger(log.Pretty)
 //
-// 			// switch to JSON formatting
-// 			log.InitLogger(log.JSON)
+//		// show a warning using pretty formatting, expected output:
+//		// 2006-01-02T15:04:05Z07:00 | WARN   | Warning
+//		log.Warn("Warning")
 //
-// 			// switch to debug level as minimum level
-// 			log.SetGlobalLevel(log.DebugLevel)
+//		// switch to JSON formatting
+//		log.InitLogger(log.JSON)
 //
-// 			// show a debug message using JSON formatting, expected output:
-// 			// {"level":"debug","time":"2006-01-02T15:04:05Z07:00","message":"Testing level debug"}
-// 			log.Debugf("Testing level %s", "debug")
-// 		}
+//		// switch to debug level as minimum level
+//		log.SetGlobalLevel(log.DebugLevel)
+//
+//		// show a debug message using JSON formatting, expected output:
+//		// {"level":"debug","time":"2006-01-02T15:04:05Z07:00","message":"Testing level debug"}
+//		log.Debugf("Testing level %s", "debug")
+//	}
 type Logger struct {
 	format  Format
 	level   Level
