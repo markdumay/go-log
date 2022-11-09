@@ -1,6 +1,10 @@
 // Copyright © 2021 Mark Dumay. All rights reserved.
 // Use of this source code is governed by The MIT License (MIT) that can be found in the LICENSE file.
 
+// Package log is a simplified logger package for Go applications. Using the Zero Allocation JSON Logger
+// (zerolog) under the hood, it simplifies the logging of application-wide messages. It supports three logging modes:
+// Default, Pretty, and JSON. Logs are directed to the console by default, but can be buffered or redirected to a log
+// file instead.
 package log
 
 //======================================================================================================================
